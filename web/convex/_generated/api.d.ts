@@ -9,7 +9,15 @@
  */
 
 import type * as auth from "../auth.js";
+import type * as calendar from "../calendar.js";
+import type * as categories from "../categories.js";
+import type * as equipment from "../equipment.js";
 import type * as http from "../http.js";
+import type * as maintenanceRequests from "../maintenanceRequests.js";
+import type * as reports from "../reports.js";
+import type * as seed from "../seed.js";
+import type * as teams from "../teams.js";
+import type * as users from "../users.js";
 
 import type {
   ApiFromModules,
@@ -19,7 +27,15 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
+  calendar: typeof calendar;
+  categories: typeof categories;
+  equipment: typeof equipment;
   http: typeof http;
+  maintenanceRequests: typeof maintenanceRequests;
+  reports: typeof reports;
+  seed: typeof seed;
+  teams: typeof teams;
+  users: typeof users;
 }>;
 
 /**

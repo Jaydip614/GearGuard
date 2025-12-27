@@ -5,8 +5,10 @@ import { DataModel } from "./_generated/dataModel";
 import { query } from "./_generated/server";
 import { betterAuth } from "better-auth";
 import authConfig from "./auth.config";
-import { emailOTP } from "better-auth/plugins"
+import { emailOTP, admin } from "better-auth/plugins"
 import { Resend } from "resend";
+import { api } from "./_generated/api";
+
 const siteUrl = process.env.SITE_URL!;
 
 // The component client has methods needed for integrating Convex with Better Auth,
@@ -14,6 +16,7 @@ const siteUrl = process.env.SITE_URL!;
 export const authComponent = createClient<DataModel>(components.betterAuth);
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+
 
 export const createAuth = (ctx: GenericCtx<DataModel>) => {
     return betterAuth({
