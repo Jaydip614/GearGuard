@@ -6,6 +6,22 @@
 - **Udit Vegad**
 - **Jaimin Solanki**
 - **Miral Padmani**
+- **Jaydip Bariya** (Leader)
+- **Udit Vegad**
+- **Jaimin Solanki**
+- **Miral Padmani**
+
+## 🚀 Live Demo
+
+**Experience GearGuard in action:** [https://gear-guard-seven.vercel.app/](https://gear-guard-seven.vercel.app/)
+
+## ✨ Key Features
+
+- **Real-Time Kanban Board:** Drag-and-drop requests with instant updates across all connected clients (powered by Convex).
+- **Role-Based Access Control:** Strict permissions for Managers (full control) vs. Technicians (execution only).
+- **Smart Equipment Tracking:** Auto-fill logic, history tracking, and "Scrap" lifecycle management.
+- **Preventive Maintenance Calendar:** Visual scheduling for routine checkups.
+- **Modern UI:** Glassmorphism design with smooth animations and responsive layouts.
 
 ## 1. Module Overview
 
@@ -69,6 +85,16 @@ Participants must implement the following business logic to make the module "ali
 2.  **Date Setting:** The user sets a Scheduled Date (e.g., Next Monday).
 3.  **Visibility:** This request must appear on the Calendar View on the specific date so the technician knows they have a job to do.
 
+### Flow 3: Equipment Scrapping (Manager Only)
+
+1.  **Identification:** A technician identifies an asset is beyond repair.
+2.  **Restriction:** Technicians cannot scrap equipment directly to prevent operational errors.
+3.  **Execution:** A Manager reviews the case and selects "Scrap" from the status dropdown or "Danger Zone".
+4.  **Automation:** The system automatically:
+    - Marks the request as **Scrapped**.
+    - Flags the Equipment as **Scrapped** (inactive) in the database.
+    - Removes the equipment from future selection lists.
+
 ## 4. User Interface & Views Requirements
 
 To provide a good User Experience (UX), the following views are required:
@@ -82,6 +108,7 @@ The primary workspace for technicians.
 - **Visual Indicators:**
   - **Technician:** Show the avatar of the assigned user.
   - **Status Color:** Display a red strip or text if the request is Overdue.
+  - **Permission Lock:** The "Scrap" column is locked for non-managers.
 
 ### 2. The Calendar View
 
@@ -103,15 +130,18 @@ These features distinguish a basic form from a smart "Odoo-like" module.
 - **Scrap Logic:**
   - If a request is moved to the **Scrap** stage, the system should logically indicate that the equipment is no longer usable (e.g., log a note or set a flag).
 
-## Tech Stack
+## Tech Stack & Advantages
 
-- **Frontend:** Next.js 15, React, Tailwind CSS, Shadcn UI
-- **Backend:** Convex (Real-time database & backend functions)
-- **Authentication:** Better Auth
-- **Styling:** Tailwind CSS with Glassmorphism design
+We chose a cutting-edge stack to deliver a premium, real-time experience:
+
+- **Next.js 15:** The latest React framework for server-side rendering, SEO, and blazing fast performance.
+- **Convex:** A real-time backend-as-a-service.
+  - _Advantage:_ Provides **instant, live updates** to the Kanban board without refreshing.
+  - _Advantage:_ Type-safe end-to-end, reducing bugs and development time.
+- **Tailwind CSS:** Utility-first styling for rapid, consistent UI development.
+- **Shadcn UI:** Accessible, high-quality component primitives.
+- **Glassmorphism Design:** A modern, translucent aesthetic (`backdrop-blur`, gradients) that makes the app feel "alive" and premium compared to standard corporate tools.
 
 ## Mockup
+
 [Excalidraw Mockup](https://link.excalidraw.com/l/65VNwvy7c4X/5y5Qt87q1Qp)
-
-
-
