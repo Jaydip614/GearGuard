@@ -6,6 +6,22 @@
 - **Udit Vegad**
 - **Jaimin Solanki**
 - **Miral Padmani**
+- **Jaydip Bariya** (Leader)
+- **Udit Vegad**
+- **Jaimin Solanki**
+- **Miral Padmani**
+
+## 🚀 Live Demo
+
+**Experience GearGuard in action:** [https://gear-guard-seven.vercel.app/](https://gear-guard-seven.vercel.app/)
+
+## ✨ Key Features
+
+- **Real-Time Kanban Board:** Drag-and-drop requests with instant updates across all connected clients (powered by Convex).
+- **Role-Based Access Control:** Strict permissions for Managers (full control) vs. Technicians (execution only).
+- **Smart Equipment Tracking:** Auto-fill logic, history tracking, and "Scrap" lifecycle management.
+- **Preventive Maintenance Calendar:** Visual scheduling for routine checkups.
+- **Modern UI:** Glassmorphism design with smooth animations and responsive layouts.
 
 ## 1. Module Overview
 
